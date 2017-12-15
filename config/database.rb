@@ -1,4 +1,3 @@
-
 configure :test do
     set :database, {
       adapter: 'postgresql',
@@ -9,7 +8,7 @@ configure :test do
       host: 'postgres'
     }
  end
- 
+
  configure :development do
   set :database, {
     adapter: 'postgresql',
@@ -20,7 +19,7 @@ configure :test do
     host: 'postgres'
   }
  end
- 
+
  configure :production do
     set :database, {
       adapter: 'postgresql',

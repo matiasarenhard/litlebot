@@ -1,17 +1,11 @@
-require_relative '../app.rb'
-require 'rspec'
-require 'rack/test'
+require 'json'
+require 'sinatra'
+require 'sinatra/activerecord'
 
-set :environment, :test
+require './config/database'
 
-module RSpecMixin
-  include Rack::Test::Methods
-
-  def app
-    App
+class App < Sinatra::Base
+  get '/sinatra' do
+    'Hello world Sinatra!'
   end
-end
-
-RSpec.configure do |c|
-  c.include RSpecMixin
 end
